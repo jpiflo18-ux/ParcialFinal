@@ -1,5 +1,6 @@
 # Parcial-Final 
 
+#Karen Prieto
 productos = {
     1: ("Cafe", 3000, 20),
     2: ("Jugo natural", 5000, 15),
@@ -8,16 +9,17 @@ productos = {
     5: ("Hamburguesa", 12000, 8)
 }
 
+#Juana Pineda
 pedido = []
 
-
+#Karen Prieto
 def mostrar_productos(productos):
     print("Codigo - Producto - Precio - Existencias")
     for codigo in productos:
         info = productos[codigo]
         print(codigo, "-", info[0], "-", info[1], "-", info[2])
 
-
+#Juana Pineda
 def registrar_producto(productos, pedido, codigo, cantidad):
     if codigo not in productos:
         print("Producto no encontrado.")
@@ -34,7 +36,7 @@ def registrar_producto(productos, pedido, codigo, cantidad):
         productos[codigo] = (nombre, precio, existencias - cantidad)
         print("Producto agregado al pedido.")
 
-
+#Karen Prieto
 def calcular_total(pedido):
     total = 0
     for item in pedido:
@@ -60,7 +62,7 @@ while opcion != 3:
     else:
         print("Opcion no valida.")
 
-#Resumen del pedido
+#Juana Pineda
 total = calcular_total(pedido)
 
 if total >= 50000:
@@ -70,6 +72,7 @@ else:
 
 total_final = total - descuento
 
+#Karen Prieto
 print("========== RESUMEN DEL PEDIDO ==========")
 print("     Producto  Cantidad  Subtotal       ")
 print("-----------------------------------------")
